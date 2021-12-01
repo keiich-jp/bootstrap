@@ -113,6 +113,11 @@ if (BROWSERSTACK) {
     project: 'Bootstrap',
     retryLimit: 2
   }
+  conf.captureTimeout = 30_000
+  conf.browserDisconnectTolerance = 0
+  conf.browserDisconnectTimeout = 30_000
+  conf.browserSocketTimeout = 12_000
+  conf.browserNoActivityTimeout = 30_000
   plugins.push('karma-browserstack-launcher', 'karma-jasmine-html-reporter')
   conf.customLaunchers = browsers
   conf.browsers = browsersKeys
